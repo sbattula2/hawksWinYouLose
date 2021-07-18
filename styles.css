@@ -1,0 +1,304 @@
+/* *****************
+// -----------------
+// ROOT SETTINGS
+// _________________
+// *****************
+*/
+*{
+    padding:0px;
+    margin:0px;
+    /**background: #E03A3E url("hawksLogoSmall.png") repeat fixed center;**/
+    color:#C1D32F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-transform:uppercase;
+    scroll-behavior: smooth;
+    background-color: #C8102E;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    height:100%;
+    overflow:auto;
+}
+
+
+
+/* *****************
+// -----------------
+// NAVIGATION HOME
+// _________________
+// *****************
+*/
+
+/** 
+backbone structure **/
+
+nav{
+    position:sticky;
+    width:100%;
+    overflow:hidden;
+}
+
+nav * {
+    background-color:#FFCD00;
+    color:#26282A;
+}
+
+nav ul {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav li{
+    padding: 1em 5em;
+}
+
+.stickyNav {
+    top:0px;
+}
+
+header{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    border-width:2rem;
+    border-style:solid;
+    border-color:transparent;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+    height:wrap;
+}
+
+article{
+    height:calc(620px*1.618);
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+article *{
+    background:none;
+}
+
+.show-mobile{
+    display:none;
+}
+
+.hide-mobile{
+    display:block;
+}
+
+#scrollDownButton{
+    font-size:2rem;
+}
+
+@media only screen and (max-width:900px){
+    
+    nav{
+        position:sticky;
+    }
+    
+    nav li{
+        padding: 1em 3em;
+    }
+
+    li:hover,li:hover a{
+        background-color:green;
+    }
+
+    .show-mobile{
+        display:none;
+    }
+
+    .hide-mobile{
+        display:block;
+    }
+
+    article{
+        height:100%;
+        flex-direction: column;
+        overflow-x:scroll;
+    }
+    
+}
+
+/*
+Hamburger menu for smaller screens 
+*/
+
+@media only screen and (max-width:1050px){
+
+    .show-mobile{
+        background-color: #87674F;
+        width:100%;
+        display:block;
+        order:2;
+
+        /*
+        display:flex;
+        flex-direction: row-reverse;
+        */
+    }
+
+    .topRow{
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    .hamburger{
+        font-size:2rem;
+        width:15%;
+        text-align: center;
+        height:3rem;
+        padding-top:1rem;
+    }
+
+    .hide-mobile{
+        display:none;
+    }
+
+    header{
+        order:1;
+    }
+
+    .navButtonsRow{
+        display:none;
+        font-size:2.5rem;
+    }
+
+    .navButtonSmall{
+        display:flex;
+        align-items:center;
+
+        height:3rem;
+        border-width:0px 0px 2px;
+        border-color:honeydew;
+        border-style: solid;
+
+        padding-left:2rem;
+    }
+
+    .navButtonSmall:nth-child(1){
+        border-width:2px 0px;
+        border-color:honeydew;
+        border-style: solid;
+    }
+
+    .navButtonSmall:hover,.navButtonSmall:hover *{
+        background-color:green;
+    }
+
+    article{
+        order:3;
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    /**
+    .navButtons div div{
+        padding-left:2rem;
+        border-width:0px 0px 2px;
+        border-color:honeydew;
+        border-style: solid;
+    }
+    **/
+
+}
+
+@media only screen and (max-width:1175px){
+
+html{
+    font-size:12px;
+}
+
+}
+
+/* *****************
+// -----------------
+// COLORING
+// _________________
+// *****************
+*/
+.introColor,.introColor *{
+    background-color: #87674F;
+}
+
+.supportColor,.supportColor * {
+    background-color: #C8102E;
+}
+
+.bogiColor,.bogiColor *{
+    background-color:#26282A;
+}
+
+.statColor,.statColor *{
+    background-color:#C1D32F;
+    color:#26282A;
+}
+
+header *{
+}
+/* *****************
+// -----------------
+// FONT SIZING
+// _________________
+// *****************
+*/
+h1{
+    font-size:4rem;
+}
+
+h2{
+    font-size:2rem;
+}
+
+/* *****************
+// -----------------
+// ARTICLE CONTENTS
+// _________________
+// *****************
+*/
+.textContent{
+    border-width:0px 2rem;
+    border-style:solid;
+    border-color:transparent;
+}
+
+/* *****************
+// -----------------
+// VIDEO CONTENTS
+// _________________
+// *****************
+*/
+.vidContent{
+    /**background: #E03A3E url("hawksLogoSmall.png") repeat fixed center;
+    **/
+    display:flex;
+    height:100%;
+
+    border-width:0px 2rem;
+    border-style:solid;
+    border-color:transparent;
+}
+
+iframe{
+    border: none;
+    height:620px;
+    width:640px;
+    margin:auto;
+}
+
+
