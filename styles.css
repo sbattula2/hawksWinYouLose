@@ -178,26 +178,30 @@ Hamburger menu for smaller screens
         font-size:2.5rem;
     }
 
+    .navButtonsRow a{
+        text-decoration: none;
+    }
+
     .navButtonSmall{
         display:flex;
         align-items:center;
 
         height:3rem;
         border-width:0px 0px 2px;
-        border-color:honeydew;
+        border-color:#26282A;
         border-style: solid;
 
         padding-left:2rem;
     }
 
-    .navButtonSmall:nth-child(1){
-        border-width:2px 0px;
-        border-color:honeydew;
+    .navButtonsRow a:nth-child(1) .navButtonSmall{
+        border-color:#26282A;
         border-style: solid;
+        border-width:2px 0px;
     }
 
     .navButtonSmall:hover,.navButtonSmall:hover *{
-        background-color:green;
+        background-color:#C8102E;
     }
 
     article{

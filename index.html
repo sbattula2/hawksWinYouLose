@@ -48,10 +48,10 @@
           onclick="showMenu()"></div>
         </div>
         <div class="navButtonsRow">
-          <div class="navButtonSmall"><div><p href="#intro">INTRODUCTION</p></div> </div>
-          <div class="navButtonSmall"><div><p href="#support">SUPPORT US</p></div></div>
-          <div class="navButtonSmall"><div><p href="#boagie">EAT BOAGIE HOAGIES</p></div></div>
-          <div class="navButtonSmall"><div><p href="#timer">ETERNAL DOMINANCE</p></div></div>
+          <a href="#intro"><div class="navButtonSmall"><div><p>INTRODUCTION</p></div> </div></a>
+          <a href="#support"><div class="navButtonSmall"><div><p>SUPPORT US</p></div></div></a>
+          <a href="#boagie"><div class="navButtonSmall"><div><p>EAT BOAGIE HOAGIES</p></div></div></a>
+          <a href="#timer"><div class="navButtonSmall"><div><p>ETERNAL DOMINANCE</p></div></div></a>
         </div>
       </nav>
 
@@ -190,8 +190,6 @@
         scrollNav();
       })
 
-      
-
       function scrollNav() {
         if (window.pageYOffset >= sticky) {
           navbar.classList.add("stickyNav");
@@ -267,14 +265,24 @@
           x.style.display = "block";
           
           var menuButton = document.getElementsByClassName('hamburger fa fa-bars')[0];
-          console.log('menu here')
-          console.log(menuButton)
         
           menuButton.classList.remove('fa', 'fa-bars');
           menuButton.classList.add('fas', 'fa-times');
 
         }
       }
+
+      $('.navButtonSmall').click(function(){
+        var x = document.querySelector(".navButtonsRow");
+        x.style.display = "none";
+
+        var menuButton = document.getElementsByClassName('hamburger fas fa-times')[0];
+          menuButton.classList.remove('fas', 'fa-times');
+          menuButton.classList.add('fa', 'fa-bars');
+
+      });
+
+      
       /**
         $('#scrollDownButton').click(function(){
             console.log('scroll down');
